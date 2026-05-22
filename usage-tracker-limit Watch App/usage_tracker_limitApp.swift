@@ -1,14 +1,10 @@
-//
-//  usage_tracker_limitApp.swift
-//  usage-tracker-limit Watch App
-//
-//  Created by rekhlitskiy on 20.05.2026.
-//
-
 import SwiftUI
 
 @main
 struct usage_tracker_limit_Watch_AppApp: App {
+    // Initialize WatchSessionManager early so WCSession activates on launch
+    private let sessionManager = WatchSessionManager.shared
+
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -1,21 +1,22 @@
-//
-//  ContentView.swift
-//  usage-tracker-limit Watch App
-//
-//  Created by rekhlitskiy on 20.05.2026.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var state = WatchState()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Group {
+            switch state.style {
+            case .claude:
+                ClaudeStyleView(data: state.data) {
+                    state.requestRefresh()
+                }
+            case .apple:
+                AppleRingsView(data: state.data) {
+                    state.requestRefresh()
+                }
+            }
         }
-        .padding()
+        .ignoresSafeArea()
     }
 }
 

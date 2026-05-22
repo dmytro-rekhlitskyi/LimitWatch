@@ -1,0 +1,42 @@
+# Xcode user-specific data
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+
+# DerivedData
+DerivedData/
+
+# Build output
+build/
+
+# Xcode Playground cache
+playground.xcworkspace
+
+# Swift Package Manager
+.build/
+Packages/
+Package.resolved
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+
+# CocoaPods (if used later)
+Pods/
+Podfile.lock
+
+# Fastlane (if used later)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Claude Code local settings
+.claude/settings.local.json
+.claude/

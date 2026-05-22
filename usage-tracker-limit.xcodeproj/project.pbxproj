@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A56FD0D72FBDE346004391D1 /* usage-tracker-limit Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A56FD0D62FBDE346004391D1 /* usage-tracker-limit Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A56FD12D2FBDF9C2004391D1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56FD1142FBDF906004391D1 /* WidgetKit.framework */; };
+		A56FD12E2FBDF9C2004391D1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56FD1162FBDF906004391D1 /* SwiftUI.framework */; };
+		A56FD1392FBDF9C3004391D1 /* ClaudeUsageWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A56FD12C2FBDF9C2004391D1 /* ClaudeUsageWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -17,6 +20,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = A56FD0D52FBDE346004391D1;
 			remoteInfo = "usage-tracker-limit Watch App";
+		};
+		A56FD1372FBDF9C3004391D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A56FD0C12FBDE344004391D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A56FD12B2FBDF9C2004391D1;
+			remoteInfo = ClaudeUsageWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -32,12 +42,37 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A56FD1272FBDF908004391D1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A56FD1392FBDF9C3004391D1 /* ClaudeUsageWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A56FD0C92FBDE345004391D1 /* usage-tracker-limit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "usage-tracker-limit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56FD0D62FBDE346004391D1 /* usage-tracker-limit Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "usage-tracker-limit Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A56FD1142FBDF906004391D1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A56FD1162FBDF906004391D1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A56FD12C2FBDF9C2004391D1 /* ClaudeUsageWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClaudeUsageWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A56FD1432FBDFACB004391D1 /* ClaudeUsageWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClaudeUsageWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A56FD13A2FBDF9C3004391D1 /* Exceptions for "ClaudeUsageWidget" folder in "ClaudeUsageWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A56FD12B2FBDF9C2004391D1 /* ClaudeUsageWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A56FD0CB2FBDE345004391D1 /* usage-tracker-limit */ = {
@@ -48,6 +83,14 @@
 		A56FD0DA2FBDE346004391D1 /* usage-tracker-limit Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "usage-tracker-limit Watch App";
+			sourceTree = "<group>";
+		};
+		A56FD12F2FBDF9C2004391D1 /* ClaudeUsageWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A56FD13A2FBDF9C3004391D1 /* Exceptions for "ClaudeUsageWidget" folder in "ClaudeUsageWidgetExtension" target */,
+			);
+			path = ClaudeUsageWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -67,14 +110,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A56FD1292FBDF9C2004391D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A56FD12E2FBDF9C2004391D1 /* SwiftUI.framework in Frameworks */,
+				A56FD12D2FBDF9C2004391D1 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		A56FD0C02FBDE344004391D1 = {
 			isa = PBXGroup;
 			children = (
+				A56FD1432FBDFACB004391D1 /* ClaudeUsageWidgetExtension.entitlements */,
 				A56FD0CB2FBDE345004391D1 /* usage-tracker-limit */,
 				A56FD0DA2FBDE346004391D1 /* usage-tracker-limit Watch App */,
+				A56FD12F2FBDF9C2004391D1 /* ClaudeUsageWidget */,
+				A56FD1132FBDF906004391D1 /* Frameworks */,
 				A56FD0CA2FBDE345004391D1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,8 +139,18 @@
 			children = (
 				A56FD0C92FBDE345004391D1 /* usage-tracker-limit.app */,
 				A56FD0D62FBDE346004391D1 /* usage-tracker-limit Watch App.app */,
+				A56FD12C2FBDF9C2004391D1 /* ClaudeUsageWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A56FD1132FBDF906004391D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A56FD1142FBDF906004391D1 /* WidgetKit.framework */,
+				A56FD1162FBDF906004391D1 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,10 +187,12 @@
 				A56FD0D22FBDE346004391D1 /* Sources */,
 				A56FD0D32FBDE346004391D1 /* Frameworks */,
 				A56FD0D42FBDE346004391D1 /* Resources */,
+				A56FD1272FBDF908004391D1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A56FD1382FBDF9C3004391D1 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				A56FD0DA2FBDE346004391D1 /* usage-tracker-limit Watch App */,
@@ -136,6 +203,28 @@
 			productName = "usage-tracker-limit Watch App";
 			productReference = A56FD0D62FBDE346004391D1 /* usage-tracker-limit Watch App.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A56FD12B2FBDF9C2004391D1 /* ClaudeUsageWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A56FD13B2FBDF9C3004391D1 /* Build configuration list for PBXNativeTarget "ClaudeUsageWidgetExtension" */;
+			buildPhases = (
+				A56FD1282FBDF9C2004391D1 /* Sources */,
+				A56FD1292FBDF9C2004391D1 /* Frameworks */,
+				A56FD12A2FBDF9C2004391D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A56FD12F2FBDF9C2004391D1 /* ClaudeUsageWidget */,
+			);
+			name = ClaudeUsageWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = ClaudeUsageWidgetExtension;
+			productReference = A56FD12C2FBDF9C2004391D1 /* ClaudeUsageWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -151,6 +240,9 @@
 						CreatedOnToolsVersion = 26.5;
 					};
 					A56FD0D52FBDE346004391D1 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					A56FD12B2FBDF9C2004391D1 = {
 						CreatedOnToolsVersion = 26.5;
 					};
 				};
@@ -171,6 +263,7 @@
 			targets = (
 				A56FD0C82FBDE345004391D1 /* usage-tracker-limit */,
 				A56FD0D52FBDE346004391D1 /* usage-tracker-limit Watch App */,
+				A56FD12B2FBDF9C2004391D1 /* ClaudeUsageWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +277,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A56FD0D42FBDE346004391D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A56FD12A2FBDF9C2004391D1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,6 +307,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A56FD1282FBDF9C2004391D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -214,6 +321,11 @@
 			isa = PBXTargetDependency;
 			target = A56FD0D52FBDE346004391D1 /* usage-tracker-limit Watch App */;
 			targetProxy = A56FD0D82FBDE346004391D1 /* PBXContainerItemProxy */;
+		};
+		A56FD1382FBDF9C3004391D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A56FD12B2FBDF9C2004391D1 /* ClaudeUsageWidgetExtension */;
+			targetProxy = A56FD1372FBDF9C3004391D1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -337,11 +449,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "usage-tracker-limit Watch App/usage-tracker-limit Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F48TTLD63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "usage-tracker-limit";
+				INFOPLIST_KEY_CFBundleDisplayName = LimitWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "rekhlitskyi.usage-tracker-limit";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -360,7 +474,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Debug;
 		};
@@ -369,11 +483,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "usage-tracker-limit Watch App/usage-tracker-limit Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F48TTLD63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "usage-tracker-limit";
+				INFOPLIST_KEY_CFBundleDisplayName = LimitWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "rekhlitskyi.usage-tracker-limit";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -393,26 +509,28 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Release;
 		};
 		A56FD0E82FBDE347004391D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F48TTLD63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "usage-tracker-limit";
+				INFOPLIST_KEY_CFBundleDisplayName = LimitWatch;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,6 +538,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "rekhlitskyi.usage-tracker-limit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -434,19 +553,21 @@
 		A56FD0E92FBDE347004391D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F48TTLD63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "usage-tracker-limit";
+				INFOPLIST_KEY_CFBundleDisplayName = LimitWatch;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +575,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "rekhlitskyi.usage-tracker-limit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -463,6 +585,75 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A56FD13C2FBDF9C3004391D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ClaudeUsageWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F48TTLD63;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClaudeUsageWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ClaudeUsageWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "rekhlitskyi.usage-tracker-limit.watchkitapp.ClaudeUsageWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
+			};
+			name = Debug;
+		};
+		A56FD13D2FBDF9C3004391D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ClaudeUsageWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F48TTLD63;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClaudeUsageWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ClaudeUsageWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "rekhlitskyi.usage-tracker-limit.watchkitapp.ClaudeUsageWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Release;
 		};
@@ -492,6 +683,15 @@
 			buildConfigurations = (
 				A56FD0E82FBDE347004391D1 /* Debug */,
 				A56FD0E92FBDE347004391D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A56FD13B2FBDF9C3004391D1 /* Build configuration list for PBXNativeTarget "ClaudeUsageWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A56FD13C2FBDF9C3004391D1 /* Debug */,
+				A56FD13D2FBDF9C3004391D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

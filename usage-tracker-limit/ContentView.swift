@@ -1,24 +1,30 @@
-//
-//  ContentView.swift
-//  usage-tracker-limit
-//
-//  Created by rekhlitskiy on 20.05.2026.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var appState: AppState
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            StatusView()
+                .tabItem {
+                    Label("Status", systemImage: "chart.bar.fill")
+                }
+
+            StylePickerView()
+                .tabItem {
+                    Label("Watch Style", systemImage: "applewatch.watchface")
+                }
+
+            AccountView()
+                .tabItem {
+                    Label("Account", systemImage: "person.crop.circle")
+                }
         }
-        .padding()
+        .tint(Color(red: 0.85, green: 0.47, blue: 0.33))
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(AppState.shared)
 }
